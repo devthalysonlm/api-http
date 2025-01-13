@@ -1,6 +1,8 @@
 // Importando o Express
 const express = require('express');
 
+const fs = require('fs')
+
 // Inicializando o app
 const app = express();
 
@@ -147,3 +149,8 @@ app.get('/usuarios', (req, res) => {
     res.status(204).send();
   });
   
+  //inciar o servidor
+
+  app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${3000}`)
+  })
